@@ -1,0 +1,213 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-image: url(blurryShop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main{
+    align-items: center;
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    justify-content: space-between;
+
+}
+.Inhalt{
+    width: 500px;
+    text-align: center;
+}
+.Inhalt h3{
+    font-size: 30px;
+    text-shadow: 0px 3px black;
+    margin-top: 0;
+    margin-bottom: 130px;
+}
+.Inhalt p{
+    font-size: 21px;
+    font-weight: 450;
+    margin-bottom: 0;
+}
+.googlemaps1{
+    height: 300px;
+    width: 500px;
+    font-size: 15px;
+    font-weight: 450;
+    text-align: center;
+    text-decoration: underline;
+    margin: 4rem;
+}
+.googlemaps1 p{
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+.googlemaps2{
+    height: 300px;
+    width: 500px;
+    font-size: 15px;
+    font-weight: 450;
+    text-align: center;
+    text-decoration: underline;
+    margin: 4rem;
+}
+.googlemaps2 p{
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+header{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(20, 20, 20);
+    height: 70px;
+    border-bottom: 1px solid white;
+}
+.Logo{
+    margin-top: 10px;
+    margin-left: 2rem;
+}
+.Oben{
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+}
+.Oben .links{
+    display: flex;
+    gap: 3rem;
+    text-align: right;
+    margin-right: 2rem;
+}
+.Oben .burgermenue{
+    color: rgb(163, 35, 45);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 2rem;
+}
+.dropdownmenue{
+    height: 0;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    margin-top: 1rem;
+    top: 60px;
+    width: 300px;
+    background: rgb(20, 20, 20);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.dropdownmenue.open{
+    height: 115px;
+}
+.dropdownmenue li{
+    font-size: 17px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: black;
+    box-sizing: border-box;
+    text-align: center;
+    color: lightgray;
+    font-size: 80%;
+    padding: 1rem;
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 110%;
+    color: rgb(160, 35, 45);
+}
+li a::after{
+    background-color: rgb(166, 125, 45);
+    transition: 0.25s;
+    display: block;
+    margin: auto;
+    content: '';
+    height: 1px;
+    width: 0;
+}
+li a:hover::after {
+    transition: 0.25s linear;
+    width: 85%;
+}
+li a:hover{
+    color: rgb(166, 125, 45);
+    transition: 0.5s;
+    font-size: 110%;
+}
+.links ul{
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+@media (max-width: 992px) {
+    .Oben .links{
+        display: none;
+    }
+    .Oben .burgermenue{
+        display: block;
+    }
+    .dropdownmenue{
+        display: block;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: none;
+    }
+    .Inhalt{
+        margin-top: 120px;
+        margin: 0;
+    }
+    .Inhalt h3{
+        margin-bottom: 0;
+    }
+    .googlemaps1{
+        margin-top: 130px;
+        width: calc(100% - 2rem)
+    }
+    .googlemaps2{
+        margin-top: 30px;
+        width: calc(100% - 2rem)
+    }
+    .Inhalt{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdownmenue{
+        left: 2rem;
+        width: unset;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: none;
+    }
+    .googlemaps{
+        width: unset;
+    }
+    .Inhalt{
+        margin-top: 0px;
+    }
+}

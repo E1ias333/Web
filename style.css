@@ -1,0 +1,249 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-image: url(blurryShop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main{
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 145px);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header{
+    border-bottom: 0.2px solid lightgray;           /*weißer Strich unter dem header*/
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(20, 20, 20);              /*Hintergrundfarbe ist fast ganz schwarz*/
+    height: 70px;                                     
+}
+.Logo{                                                /*Das Logo-Icon mit den Abständen*/
+    margin-top: 10px;
+    margin-left: 2rem;
+}
+.Oben{                                                /*der div im header mit allen Inhalten des headers*/
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+}
+.Oben .links{                                        /*die Überschriften im header rechts*/
+    display: flex;
+    gap: 3rem;
+    text-align: right;
+    margin-right: 2rem;
+}
+.Oben .burgermenue{                                  /*das burgermenue-icon*/
+    color: rgb(163, 35, 45);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 2rem;
+}
+.dropdownmenue{                                      /*das menue das erscheint, wenn man auf das burgermenue klickt*/
+    height: 0;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    margin-top: 1rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.dropdownmenue.open{                                 /*die hoehe vom dropdownmenue*/
+    height: 115px;
+}
+.dropdownmenue li{                                   /*die ueberschriften im dropdownmenue*/
+    font-size: 17px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{               
+    background-color: black;                               /*der footer ganz unten*/
+    box-sizing: border-box;
+    text-align: center;
+    color: lightgray;
+    font-size: 80%;
+    padding: 1rem;
+    border-top: 0.2px solid lightgray;
+    height: 75px;
+}
+li{                                                  
+    list-style: none;
+}
+li a{                                                 /*die ueberschriften im header*/
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 110%;
+    color: rgb(160, 35, 45);
+}
+li a::after{                                          /*die linie unter der ueberschrift*/
+    background-color: rgb(166, 125, 45);
+    transition: 0.25s;
+    display: block;
+    margin: auto;
+    content: '';
+    height: 1px;
+    width: 0;
+}
+li a:hover::after {                                   
+    transition: 0.25s linear;
+    width: 85%;
+}
+li a:hover{                                            /*die ueberschrift wenn man mit der maus darueber ist*/
+    color: rgb(166, 125, 45);
+    transition: 0.5s;
+    font-size: 110%;
+}
+.links ul{
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+#titel{
+    align-items: center;
+    flex-direction: column;
+    width: 322px;
+}
+#titel h1{
+    color: white;
+    font-size: 100px;
+    margin-bottom: 0px;
+    margin-top: 120px;
+    text-shadow: 0px 3px black;
+}
+#titel p{
+    color: white;
+    font-size: 13px;
+    line-height: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.container{
+    margin-top: 0px;
+}
+.suchbox{
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+    background-color: lightgray;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    transition: 0.7s;
+    display: flex;
+    height: 30px;
+}
+.suchbox:hover input{
+    width: 230px;
+    cursor: auto;
+}
+.suchbox input{
+    background: transparent;
+    font-weight: 500;
+    transition: 0.7s;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    width: 0px;
+}
+.suchbox .icon :hover{
+    cursor: pointer;
+}
+.suchbox .icon .fas{
+    margin: 0;
+    text-decoration: none;
+    color: rgb(56, 55, 55);
+}
+#resultate{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#resultate div{
+    background-color: rgba(20, 20, 20, 0.55);
+    border: rgba(255, 255, 255, 0.65) 2px solid;
+    color: white;
+    border-radius: 8px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 510px;
+    justify-content: space-between;
+}
+#resultate div h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-shadow: 2px 4px black;
+}
+#resultate div h3{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+#resultate div .thumbnail{
+    border: rgb(0, 0, 0) solid 1.5px;
+    width: 350px;
+    height: 300px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+#resultate button{
+    cursor: pointer;
+    background-color: lightgray;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: 0.75s;
+    text-shadow: 1px 1px rgb(141, 141, 141);
+}
+#resultate button:hover{
+    background-color: rgb(160, 35, 45);
+    transition: 0.75s;
+}
+@media (max-width: 992px) {
+    .Oben .links{
+        display: none;
+    }
+    .Oben .burgermenue{
+        display: block;
+    }
+    .dropdownmenue{
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdownmenue{
+        left: 2rem;
+        width: unset;
+    }
+    #resultate{
+        flex-direction: column;
+    }
+}
